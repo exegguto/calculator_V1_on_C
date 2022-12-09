@@ -1,0 +1,106 @@
+\documentclass[12pt, letterpaper, twoside]{article}
+\usepackage{cmap}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage[a4paper,% размер страницы
+text={180mm, 260mm},% ширина и высота текста
+top=15mm, bottom=15mm, left=15mm, top=15mm]{geometry}
+\usepackage{textcomp}
+
+\title{SmartCalc v1.0}
+\author{exegguto}
+\date{Октябрь 2022}
+
+\begin{document}
+\maketitle
+
+В данном проекте реализована на языке программирования Си с использованием структурного подхода расширенная версия обычного калькулятора, который можно найти в стандартных приложениях каждой операционной системы. Помимо базовых арифметических операций, как плюс-минус и умножить-поделить, калькулятор дополнен возможностью вычисления арифметических выражений с учетом приоритетов, а так же некоторыми математическими функциями (синус, косинус, логарифм и т.д.). Помимо вычисления выражений калькулятор так же поддерживает использование переменной x и построение графика соответствующей функции. Так же реализованы кредитный и депозитный калькуляторы.
+
+Для корректной проверки данного проекта необходимо:
+
+sudo apt install qt5-qmake
+
+sudo apt install libqt5charts5 libqt5charts5-dev
+
+sudo apt install xdg-utils
+
+sudo apt install texlive-full
+
+mac:
+
+brew install qt6
+
+brew link qt6 --force
+
+brew install texlive
+
+\begin{enumerate}
+    \item Part 1. Реализация SmartCalc v1.0
+
+    - **Арифметические операторы**:
+
+    \begin{center}
+      \begin{tabular}{ | c | c | }
+        \hline
+        Название оператора & Инфиксная нотация (Классическая) \\ 
+        \hline\hline
+        Скобки & (a + b) \\
+        \hline
+        Сложение & a + b \\
+        \hline
+        Вычитание & a - b \\
+        \hline
+        Умножение & a * b \\
+        \hline
+        Деление & a / b \\
+        \hline
+        Возведение в степень & a \^   b \\
+        \hline
+        Остаток от деления & a mod b \\
+        \hline
+        Унарный плюс & +a \\
+        \hline
+        Унарный минус & -a \\
+        \hline
+      \end{tabular}
+    \end{center}
+
+    >Обратите внимание, что оператор умножения содержит обязательный знак `*`. 
+
+- **Функции**:
+
+\begin{center}
+  \begin{tabular}{ | c | c | }
+    \hline
+    Описание функции & Функция \\ 
+    \hline\hline
+    Вычисляет косинус & cos(x) \\
+    \hline
+    Вычисляет синус & asin(x) \\
+    \hline
+    Вычисляет тангенс & acos(x) \\
+    \hline
+    Вычисляет арккосинус & tan(x) \\
+    \hline
+    Вычисляет арксинус & asin(x) \\
+    \hline
+    Вычисляет арктангенс & atan(x) \\
+    \hline
+    Вычисляет квадратный корень & sqrt(x) \\
+    \hline
+    Вычисляет натуральный логарифм & ln(x) \\
+    \hline
+    Вычисляет десятичный логарифм & log(x) \\
+    \hline
+  \end{tabular}
+\end{center}
+
+- Область определения и область значения функций ограничиваются от -1000000 до 1000000
+- Для построения графиков функции необходимо дополнительно указывать отображаемые область определения и область значения
+
+    \item Part 2. Кредитный калькулятор
+    \item Part 3. Депозитный калькулятор
+  \end{enumerate}
+
+\end{document}
